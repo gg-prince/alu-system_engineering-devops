@@ -15,8 +15,8 @@ frontend ggp_http_front
 backend ggp_webservers
     mode http
     balance roundrobin
-    server web-01 WEB01_IP:80 check
-    server web-02 WEB02_IP:80 check
+    server web-01 18.170.32.219:80 check
+    server web-02 18.170.99.250:80 check
 CFG
 fi
 sed -i "s/^ENABLED=.*/ENABLED=1/" /etc/default/haproxy
